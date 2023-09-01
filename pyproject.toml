@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "wmul-nocodb"
+authors = [
+    {name = "Michael Stanley", email = "stanley50@marshall.edu"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+]
+
+dynamic = ["version"]
+description = "A package to use NocoDB API in a simple way. A fork of https://github.com/elchicodepython/python-nocodb"
+
+dependencies = [
+  "requests>=2.0"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest"
+]
+
+[project.urls]
+Home = "https://github.com/MikeTheHammer/wmul-python-nocodb"
+"Bug Tracker" = "https://github.com/MikeTheHammer/wmul-python-nocodb/issuespip"
