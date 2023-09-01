@@ -1,21 +1,21 @@
 # NocoDB Python Client
 
 NocoDB is a great Airtable alternative. This client allows python developers
-to use NocoDB API in a simple way.
+to use NocoDB API in a simple way. This is a fork of https://github.com/elchicodepython/python-nocodb .
 
 ## Installation
 
 ```bash
-pip install nocodb
+pip install wmul-nocodb
 ```
 
 ## Usage
 
 ### Client configuration
 ```python
-from nocodb.nocodb import NocoDBProject, APIToken, JWTAuthToken
-from nocodb.filters import LikeFilter, EqFilter, And
-from nocodb.infra.requests_client import NocoDBRequestsClient
+from wmul-nocodb.nocodb import NocoDBProject, APIToken, JWTAuthToken
+from wmul-nocodb.filters import LikeFilter, EqFilter, And
+from wmul-nocodb.infra.requests_client import NocoDBRequestsClient
 
 
 # Usage with API Token
@@ -162,7 +162,7 @@ client.table_row_delete(project, table_name, row_id)
 #### Combining filters using Logical operations
 
 ```python
-from nocodb import filters
+from wmul-nocodb import filters
 
 # Basic filters...
 nick_filter = filters.EqFilter("nickname", "elchicodepython")
@@ -194,7 +194,7 @@ For those filters you can build your own.
 Example for basic filters:
 
 ```python
-from nocodb.filters.factory import basic_filter_class_factory
+from wmul-nocodb.filters.factory import basic_filter_class_factory
 
 BasicFilter = basic_filter_class_factory('=')
 table_rows = client.table_row_list(project, table_name, BasicFilter('age', '16'))
@@ -207,7 +207,7 @@ In some cases you might want to write your own filter string as described in the
 For that cases you can use the less-semmantic RawFilter.
 
 ```python
-from nocodb.filters.raw_filter import RawFilter
+from wmul-nocodb.filters.raw_filter import RawFilter
 
 table_rows = client.table_row_list(project, table_name, RawFilter('(birthday,eq,exactDate,2023-06-01)'))
 ```
@@ -216,7 +216,7 @@ In some cases we might want to have a file with some custom raw filters already 
 We can easily create custom raw filter classes using `raw_template_filter_class_factory`.
 
 ```python
-from nocodb.filters.factory import raw_template_filter_class_factory
+from wmul-nocodb.filters.factory import raw_template_filter_class_factory
 
 BirthdayDateFilter = raw_template_filter_class_factory('(birthday,eq,exactDate,{})')
 ExactDateEqFilter = raw_template_filter_class_factory('({},eq,exactDate,{})')
@@ -232,14 +232,13 @@ Credits to @MitPitt for asking this feature.
 
 ## Author notes
 
-I created this package to bootstrap some personal projects and I hope it
-will help other developers from the python community. It's not completed but
-it has what I needed: A full CRUD with some filters.
+This is a (maybe temporary?) fork of https://github.com/elchicodepython/python-nocodb
 
-Feel free to add new capabilities by creating a new MR.
 
 ## Contributors
 
+
+### To Original Project
 ![Contributors image](https://contrib.rocks/image?repo=elchicodepython/python-nocodb)
 
 

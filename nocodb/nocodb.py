@@ -4,6 +4,7 @@ from typing import Optional
 """
 License MIT
 
+Copyright 2023 Michael Stanley
 Copyright 2022 Samuel López Saura
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
