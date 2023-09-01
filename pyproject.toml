@@ -27,6 +27,9 @@ dependencies = [
 test = [
   "pytest"
 ]
+tox = [
+  "tox"
+]
 
 [project.urls]
 Home = "https://github.com/MikeTheHammer/wmul-python-nocodb"
