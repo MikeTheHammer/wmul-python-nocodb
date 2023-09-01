@@ -3,12 +3,6 @@
 NocoDB is a great Airtable alternative. This client allows python developers
 to use NocoDB API in a simple way. This is a fork of https://github.com/elchicodepython/python-nocodb .
 
-## Installation
-
-```bash
-pip install wmul-nocodb
-```
-
 ## Usage
 
 ### Client configuration
